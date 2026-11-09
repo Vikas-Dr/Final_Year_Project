@@ -94,6 +94,16 @@ def on_startup() -> None:
 # Health & DB Status
 # ─────────────────────────────────────────────────────────────────────────────
 
+@app.get("/")
+def root() -> dict:
+    return {
+        "message": "AI-Powered Interview Evaluation & Resume Analysis API is running!",
+        "version": "2.0.0",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok", "version": "2.0.0"}
