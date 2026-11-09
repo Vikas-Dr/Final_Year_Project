@@ -1,0 +1,116 @@
+International Research Journal of Engineering and Technology (IRJET)
+e-ISSN: 2395-0056  Volume: 12 Issue: 11 | Nov 2025  www.irjet.net  p-ISSN: 2395-0072
+
+AI-Powered Interview Evaluation and Resume Analysis System
+
+Guide Name1, Author Name 22, Author Name 33, Author Name 44, Author Name 55
+1Assistant Professor, Information Science and Engineering, Bapuji Institute of Engineering and Technology, Davangere, affiliated to VTU Belagavi, Karnataka, India.
+2-5Bachelor of Engineering, Information Science and Engineering, Bapuji Institute of Engineering and Technology, Karnataka, India
+
+---------------------------------------------------------------------***---------------------------------------------------------------------
+
+Abstract - Traditional recruitment processes take a lot of time, effort and consistency because they rely on manual resume screening, subjective interview judgment and multiple evaluation stages. Recruiters often find it difficult to compare large numbers of candidates fairly, verify identity before online assessments, and produce structured hiring decisions, which leads to delay, bias and increased workload.
+To solve these problems, an AI-powered interview evaluation and resume analysis system is developed. Candidates can upload resumes, verify identity using ID card and live selfie matching, and appear for role-based interviews containing MCQ, theory and coding questions. The system automatically extracts resume details, matches skills with job requirements, evaluates answers, and generates ranked reports with recommendations. This makes recruitment faster, fairer, more secure and easier for recruiters, HR teams and academic evaluators.
+
+Key Words : Artificial Intelligence, Resume Analysis, Job Matching, Identity Verification, Interview Evaluation, Automated Recruitment System, Candidate Scoring, Report Generation.
+
+1. INTRODUCTION
+Recruitment traditionally depends on manual resume reading, personal judgment, and repeated interview discussions, making the process slow, inconsistent and challenging for both recruiters and organizations. Recruiters often review large volumes of applications and create multiple evaluation notes to compare candidates, while remote hiring increases the risk of unverified identity and uneven scoring. This results in delayed decisions, communication issues, and reduced fairness, highlighting the limitations of conventional hiring practices.
+
+With the rising demand for quick, customized and reliable hiring solutions, smart technologies have started reshaping the recruitment industry. Artificial Intelligence (AI) offers automated, efficient and user-friendly methods for analysing resumes, matching skills, verifying identity and scoring interviews. AI-driven tools are capable of extracting candidate details, understanding role requirements, and generating structured evaluation outcomes without extensive manual effort.
+
+The project introduces an AI-Powered Interview Evaluation and Resume Analysis System that supports end-to-end candidate assessment. Users can log in as candidate or recruiter, upload resumes, verify identity, take role-based interviews, and view ranked evaluation reports. The system interprets resume and interview inputs and instantly produces scores, feedback and recommendations. This innovative solution enhances consistency, reduces time and cost, and effectively bridges the gap between manual hiring effort and data-driven decision making.
+
+1.1 Description
+The AI-Powered Interview Evaluation and Resume Analysis System is an innovative solution developed to automate and enhance the hiring process using Artificial Intelligence, Natural Language Processing and structured evaluation logic. Its objective is to help recruiters and academic evaluators analyse candidate profiles and interview performance with precision and convenience. Conventional methods require manual screening, subjective scoring and considerable effort to compare skills, verify identity or finalize hiring recommendations. To address these limitations, the proposed system offers an intelligent and automated platform capable of generating evaluation results within a unified workflow.
+
+The system enables candidates to upload resume files in PDF, DOCX or TXT format, which are then processed to identify education, experience, projects, certifications and technical skills. After analysis, it compares the profile with a job description to produce resume and job-match scores. Before the interview, candidates upload an ID card and capture a live selfie for identity verification. The platform then generates role-based MCQ, theory and coding questions, evaluates responses, and creates a final report with recommendation bands such as Highly Recommended, Recommended, Consider with Further Review, or Needs Improvement.
+
+Developed using React for the frontend and FastAPI with Python for the backend, the system incorporates rule-based NLP scoring with optional Ollama-based LLM enrichment. It also includes JWT authentication, SQLite/MySQL storage, optional MongoDB support, and PDF report generation. By reducing time, minimizing inconsistency and enhancing transparency, the system delivers a smart, efficient and user-friendly approach to modern recruitment evaluation.
+
+1.2 Existing System
+Users experience less accessibility, lengthier hiring cycles, and restricted evaluation consistency as a result of these constraints.
+• Manual resume screening using conventional tools and human review.
+• Interview evaluation depends heavily on individual judgment and may vary across recruiters.
+• Identity checks before online interviews are often weak, missing or handled separately.
+• Existing automated tools are fragmented across ATS, coding platforms and reporting systems.
+• Limited real-time integrated support for resume analysis, verification, interview scoring and reporting.
+These are the current platform limitations.
+
+1.3 Proposed System
+An AI-powered system transforms recruitment evaluation into an integrated workflow using resume intelligence, identity verification and structured interview scoring.
+• AI and NLP automatically extract and analyse resume content.
+• Job description matching computes compatibility and skill-overlap feedback.
+• ID upload and live selfie matching verify candidate identity before assessment.
+• Role-based MCQ, theory and coding interviews are generated and evaluated automatically.
+• Dashboard ranking and PDF reports support faster and fairer hiring decisions.
+
+1.4 Objectives
+• To develop an AI-based system capable of analysing resumes and matching candidate skills with job requirements automatically.
+• To implement identity verification using ID-card upload and live selfie comparison before interview assessment.
+• To create a role-based interview module covering MCQ, theory and coding evaluation with weighted scoring.
+• To generate structured candidate reports, recommendations and recruiter dashboards that reduce manual effort and improve decision quality.
+
+2. LITERATURE SURVEY
+A Literature Survey provides an overview of existing research, technologies and methods related to Artificial Intelligence driven recruitment automation. It examines previous studies on resume parsing, job matching, identity verification and interview scoring to identify current trends, gaps and advancement in automated hiring support. It helps in understanding the foundation and supporting the development of the proposed Artificial Intelligence based system.
+
+Table -1: Literature Survey
+Title | Authors | Methodology | Gap
+Resume parser with natural language processing | Sanyal et al. (2017) | NLP extraction from resumes | Limited interview + identity integration
+Matching resumes to jobs via deep Siamese network | Maheshwary and Misra (2018) | Deep resume-job matching | No interview scoring/reporting
+AI-based interview scoring systems for technical recruitment | Chen and Wong (2022) | Question-based interview analysis | Lacks unified resume + identity flow
+Identity verification and secure candidate onboarding | Johnson (2023) | Document validation before assessment | Separate from resume/interview scoring
+
+This section highlights the gaps that drive the proposed AI-powered interview evaluation and resume analysis system and provides an overview of sample work in each field.
+
+3. SYSTEM REQUIREMENTS AND SPECIFICATION
+The system requires basic user operations such as candidate and recruiter login, authentication, resume upload, identity verification, interview generation, answer evaluation, report storage, dashboard viewing and secure logout. It also demands a simple and user-friendly interface with fast response time, secure credential handling, modular and maintainable code, portability across operating systems supporting Python and Node.js, and scalability for adding future functionalities.
+
+The system is designed to run on Windows, macOS or Linux using Python 3.10 or higher and Node.js 18 or higher, with essential libraries such as FastAPI, Uvicorn, SQLAlchemy, pdfplumber, python-docx, Pillow, Passlib, python-jose, React and axios. It uses SQLite or MySQL as the primary relational database, with optional MongoDB for document and file storage. It requires at least a multi-core processor, 8 GB RAM, sufficient SSD storage, a webcam for live selfie capture, and optionally local Ollama to enhance AI-based enrichment performance.
+
+4. IMPLEMENTATION
+The system is implemented using React for the user interface and FastAPI for backend services, with SQLite/MySQL for relational data storage and optional MongoDB for document profiles. Candidates and recruiters authenticate through JWT-based login. Resumes are processed using pdfplumber and python-docx, while identity verification uses image similarity heuristics on ID and selfie images. Interview questions are selected from a role-specific question bank, and answers are evaluated through deterministic MCQ scoring, keyword/overlap-based theory scoring and test-case based coding evaluation. The modular structure ensures easy integration of additional roles and smooth execution across supported operating systems.
+
+Fig -1: System Design
+Interview score = MCQ×0.40 + Theory×0.60
+Overall score = Resume×0.25 + Interview×0.45 + Coding×0.30
+Recommendations: Highly Recommended (≥80), Recommended (≥65), Consider with Further Review (≥50), Needs Improvement (<50)
+
+5. RESULTS AND EVALUATION
+The system successfully generated resume analysis results, identity verification outcomes and interview evaluation reports based on user inputs, producing accurate and structured outputs. User interactions such as login, resume upload, verification, interview submission and report retrieval performed smoothly with quick response times. Overall, the system delivered consistent and reliable results across multiple test cases.
+
+Performance evaluation showed that the system responded within seconds for major operations under local deployment, meeting the defined non-functional requirements. User testing indicated high satisfaction with interface simplicity, workflow clarity and output usefulness. The system demonstrated good stability, portability and scalability during functional and end-to-end workflow testing.
+
+Table -4: Sample Test Cases
+TC01 Valid login -> Pass
+TC02 Resume upload -> Pass
+TC03 Matching ID/selfie -> Pass
+TC04 Mismatched identity -> Pass
+TC05 Full interview scoring -> Pass
+TC06 PDF report download -> Pass
+
+6. DISCUSSION
+The developed system demonstrates that AI-based recruitment assistance can significantly simplify the hiring process for users by automating resume analysis, identity verification and interview evaluation efficiently. The results show that the system is easy to use, delivers quick responses, and maintains stable performance across different test scenarios. Although the current model provides effective evaluation support, further improvements such as stronger biometric verification, advanced LLM-based answer scoring, voice/video interview analytics and cloud deployment can make the system even more powerful and user-centric.
+
+Compared with fragmented existing tools, the proposed platform provides an integrated candidate-to-report workflow. Deterministic scoring for MCQ and coding improves reproducibility, while optional Ollama enrichment offers flexibility for richer resume insights. The main limitations are dependence on resume formatting quality, lightweight face-similarity verification, and controlled academic execution of coding answers.
+
+7. CONCLUSION
+The project effectively illustrates how automation in technology may make recruitment evaluation simpler. The system provides a contemporary method for analysing candidates by combining React, FastAPI, NLP-based scoring and image-based identity checks. The procedure is made more participatory and effective by the ease with which candidates can upload a resume, verify identity and complete role-based interviews.
+
+Without depending only on subjective judgment, the system swiftly processes inputs and creates structured outputs that highlight scores, feedback and recommendations. It is appropriate for recruiters and academic evaluators who seek quick and consistent assessment support because of its user-friendly interface and dependable functionality. The entire evaluation process is accelerated and less manual labour is required thanks to the automated approach.
+
+Overall, the project's goals of increasing accessibility, reducing time, improving fairness and fostering innovation in recruitment evaluation are met. It offers a useful, clever and intuitive platform that makes it easy for organizations to experiment with AI-assisted hiring workflows. This interactive web application demonstrates how AI-powered tools can make interview evaluation and resume analysis more accessible and reliable for a larger audience.
+
+REFERENCES
+[1] S. Sanyal, S. Hazra, S. Adhikary, and N. Ghosh, “Resume parser with natural language processing,” International Journal of Engineering Science and Computing, 2017, pp. 5192–5195.
+[2] S. K. Kopparapu, “Automatic extraction of usable information from unstructured resumes to aid search,” IEEE International Conference on Progress in Informatics and Computing (PIC), 2010, pp. 99–103.
+[3] S. Maheshwary and H. Misra, “Matching resumes to jobs via deep Siamese network,” Companion Proceedings of The Web Conference, 2018.
+[4] C. Qin et al., “Enhancing person-job fit for talent recruitment: An ability-aware neural network approach,” Proc. ACM SIGIR, 2018, pp. 25–34.
+[5] N. Reimers and I. Gurevych, “Sentence-BERT: Sentence embeddings using Siamese BERT-networks,” Proc. EMNLP-IJCNLP, 2019, pp. 3982–3992.
+[6] Y. Xu et al., “LayoutLM: Pre-training of text and layout for document image understanding,” Proc. ACM SIGKDD, 2020, pp. 1192–1200.
+[7] Z. Ji et al., “Survey of hallucination in natural language generation,” ACM Computing Surveys, vol. 55, no. 12, 2023, pp. 1–38.
+[8] S. Ramírez, “FastAPI Documentation,” https://fastapi.tiangolo.com/.
+[9] Meta Platforms Inc., “React Documentation,” https://react.dev/.
+[10] Ollama, “Ollama Documentation,” https://ollama.com/.
+[11] SQLite, “SQLite Database Engine – Official Documentation,” https://www.sqlite.org/.
+[12] MongoDB Inc., “Motor: Asynchronous Python Driver for MongoDB,” https://www.mongodb.com/docs/drivers/motor/.

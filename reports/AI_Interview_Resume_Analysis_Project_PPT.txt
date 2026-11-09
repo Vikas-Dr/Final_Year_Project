@@ -1,0 +1,158 @@
+AI-Powered Interview Evaluation & Resume Analysis System
+
+Final Year Project Presentation
+
+Presented by:
+[Your Name]
+[Your USN]
+Department of Information Science and Engineering
+[College Name]
+
+
+Slide 1: Introduction
+
+This project is an intelligent recruitment support system designed to improve the hiring process. In many companies, recruiters spend a lot of time reviewing resumes and evaluating candidates manually. This process is slow, tiring, and sometimes unfair because different recruiters may judge candidates differently. This project solves that problem by using artificial intelligence to automate resume screening, interview evaluation, and final candidate assessment.
+
+The main goal of this system is to reduce manual work and make recruitment faster, smarter, and more consistent. It helps recruiters and HR teams analyze candidate skills, compare them with job requirements, and score their performance in interviews. The system is designed to be user-friendly and practical for real-world use.
+
+
+Slide 2: Problem Statement
+
+Traditional resume screening and interview evaluation take a lot of time and effort. Recruiters often need to read many resumes, identify relevant experience and skills, and compare them with job requirements. This process becomes difficult when there are many applicants for one position. In addition, human evaluation can be inconsistent and may not always be fair.
+
+This project addresses these issues by creating an AI-based system that automatically analyzes resumes, scores candidate performance, generates interview questions, and produces a structured evaluation report. The system helps reduce workload, improve speed, and make candidate assessment more objective.
+
+
+Slide 3: Objectives
+
+The main objectives of this project are as follows:
+
+- To analyze candidate resumes automatically and extract important information.
+- To compare candidate skills with job requirements and calculate a job-match score.
+- To generate role-based interview questions for different job positions.
+- To evaluate candidate responses using MCQ, theory, and coding assessments.
+- To improve fairness and consistency in recruitment decisions.
+- To provide a simple dashboard and downloadable reports for recruiters.
+- To add identity verification before interview access.
+
+
+Slide 4: Scope of the Project
+
+This project can be used by companies, hiring teams, and academic evaluation systems. It helps in screening candidates for job roles, evaluating technical knowledge, and reviewing candidate performance before final hiring decisions. The system supports several job roles and can generate questions based on each role.
+
+The project includes resume upload in PDF, DOCX, or text format, automatic text extraction, skill detection, and job-match scoring. It also includes identity verification where a candidate uploads an ID card and captures a live selfie. The system checks whether the ID and selfie match before allowing the interview to begin.
+
+
+Slide 5: System Overview
+
+The system is divided into several modules that work together. The frontend acts as the user interface, where candidates and recruiters can log in, upload resumes, start interviews, and view reports. The backend is responsible for processing requests, managing data, and running the logic for scoring and evaluation.
+
+The system stores user information, verification details, and candidate results in a database. It also supports AI-based analysis using rule-based logic and can use local AI tools such as Ollama when available. This makes the project flexible and suitable for both demo and real-world use.
+
+
+Slide 6: Features of the System
+
+The system includes the following major features:
+
+- Resume upload and text extraction
+- Candidate name, email, phone, skills, education, and experience extraction
+- Job description comparison and match score generation
+- Role-based interview question generation
+- MCQ, theory, and coding question evaluation
+- Final score calculation and recommendation generation
+- Candidate dashboard and recruiter dashboard
+- Identity verification using ID upload and selfie capture
+- Downloadable PDF report generation
+- Candidate status and recent activity tracking
+
+
+Slide 7: Modules in the Project
+
+The project is divided into several main modules. The first module is the Resume Analysis module. It extracts text from the resume, detects required sections, identifies skills, and evaluates the candidate’s match with a job description.
+
+The second module is the Identity Verification module. The candidate uploads an ID card and captures a live selfie. The system checks the image similarity and unlocks the interview only when the verification passes. The third module is the Interview module, which generates questions and captures answers. The fourth module is the Evaluation and Report module, which calculates final scores and produces a performance report.
+
+
+Slide 8: Resume Analysis Process
+
+The resume analysis process begins when the user uploads a resume in PDF, DOCX, or text format. The system extracts text from the file and detects important sections such as education, experience, projects, and certifications. It then searches for keywords like Python, Java, React, SQL, machine learning, and other technical skills.
+
+The extracted data is compared with the job description to calculate a job-match score. The system also identifies candidate strengths and missing skills. This helps recruiters understand whether the candidate matches the required role and how strong the candidate profile is.
+
+
+Slide 9: Identity Verification Process
+
+Identity verification is one of the most important features in this project. Before the candidate can start the interview, they must upload a valid ID card and capture a live selfie using the camera. The system saves both images, compares them, and calculates a similarity score.
+
+If the images match closely enough and image quality is good, the candidate is verified and allowed to continue. If the match is weak or the images do not meet the required quality, the candidate is rejected and cannot proceed. This makes the system more secure and reduces fake participation.
+
+
+Slide 10: Interview Evaluation Flow
+
+The interview module follows a structured flow. First, the candidate enters basic details and chooses a job role. Then the system generates a set of MCQ questions, theory questions, and coding questions based on that role.
+
+The MCQ section checks factual technical knowledge. The theory section checks communication, conceptual understanding, and technical explanation quality. The coding section checks problem-solving ability using direct programming questions and test cases. The system evaluates each section separately and then combines the scores to produce a final result.
+
+
+Slide 11: Question Generation
+
+The project includes a role-based question bank stored in the system. Different job roles have different technical questions. For example, the Python Engineer role includes Python, data structures, OOP, algorithms, and coding tasks. The AI Engineer role includes NLP, machine learning, evaluation metrics, and deep learning concepts.
+
+This makes the interview more personalized and relevant to the selected role. The candidate is tested on skills that match the job requirement rather than using a generic interview for all applicants.
+
+
+Slide 12: Technology Stack
+
+The frontend of the project is built using React.js. It provides a modern and simple interface for different user roles, including candidate and recruiter. The backend is built using FastAPI, a fast and efficient Python framework for API development.
+
+The system uses SQL database for structured data storage and can also connect to MongoDB for optional document-based storage. Python libraries such as pdfplumber, docx, and NLP tools are used for resume extraction and analysis. For AI support, the system uses rule-based evaluation and can connect to local AI tools such as Ollama if required.
+
+
+Slide 13: Dashboard and Reporting
+
+The dashboard shows real-time statistics such as the number of resumes processed, interviews completed, average score, and top candidates. Recruiters can use this data to compare candidates and identify the strongest applicants quickly.
+
+The system also provides downloadable report generation. These reports include the candidate’s resume score, interview score, coding score, overall score, and recommendation. This makes decision-making easier and more structured for the recruitment team.
+
+
+Slide 14: Advantages
+
+The project offers several advantages:
+
+- Reduces manual effort in resume screening
+- Saves time for recruiters
+- Improves consistency in candidate evaluation
+- Supports role-based assessments
+- Provides clear candidate scoring and reports
+- Adds identity verification for security
+- Offers a modern and user-friendly interface
+- Can be extended in future versions
+
+
+Slide 15: Future Enhancements
+
+This project can be improved in many ways in the future. Some useful enhancements are:
+
+- Voice and video interview analysis
+- Facial emotion detection during interviews
+- Advanced AI-based scoring using LLMs
+- Real-time recruiter notifications
+- Cloud deployment on AWS or Azure
+- Mobile app support
+- Multi-language support
+- Stronger identity verification and anti-fraud checks
+- Candidate ranking engine and analytics dashboard
+
+
+Slide 16: Conclusion
+
+This project successfully demonstrates how artificial intelligence can be used to improve the recruitment process. It combines resume analysis, identity verification, interview evaluation, and report generation into a single practical platform. The system reduces manual effort and improves accuracy, consistency, and fairness in hiring decisions.
+
+The project is valuable because it solves a real-world problem using modern technology. It also reflects the student’s ability to design, implement, and test a complete software system. This makes the project suitable for final-year academic evaluation and also scalable for future real-world deployment.
+
+
+Thank You
+
+Any Questions?
+
+Project: AI-Powered Interview Evaluation & Resume Analysis System

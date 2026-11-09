@@ -1,0 +1,35 @@
+Slide 1: AI-Powered Interview Evaluation & Resume Analysis System
+- An intelligent recruiting system for resume screening and candidate evaluation.
+- Helps recruiters reduce manual review work and improve decision-making.
+- Combines resume analysis, identity verification, and interview assessment in one platform.
+
+Slide 2: Problem Statement
+- Manual review of resumes is slow, tiring, and inconsistent.
+- Recruiters spend too much time comparing skills with job requirements.
+- Fake candidates can sometimes enter interviews without proper verification.
+- The project solves this using AI, automation, and secure identity checks.
+
+Slide 3: Objectives
+- Automatically analyze resumes and extract skills, education, and experience.
+- Compare candidate profiles with job requirements using a match score.
+- Verify identity using ID upload and selfie matching before the test begins.
+- Generate structured interview reports for recruiters and evaluators.
+
+Slide 4: Key Features
+- Resume upload in PDF/DOCX/TXT format.
+- Interview question generation based on job role.
+- AI evaluation of technical and communication performance.
+- Dashboard, candidate rankings, and downloadable reports.
+
+Slide 5: Identity Verification
+- Candidate uploads ID card and captures live face image.
+- The system checks if both images match and validates identity.
+- Access to the interview is only allowed after successful verification.
+- This reduces cheating and fake participation.
+
+Slide 6: Conclusion
+- The project brings together resume analysis, hiring intelligence, and secure identity checks.
+- It improves recruitment speed, fairness, and overall efficiency.
+- The system is suitable for companies, colleges, and modern recruitment platforms.
+- It is a strong final-year project with practical real-world value.
+

@@ -1,0 +1,477 @@
+
+
+FINAL YEAR PROJECT REPORT
+ON
+AI-Powered Interview Evaluation & Resume Analysis System
+
+Submitted in partial fulfilment of the requirements for the award of the degree of
+Bachelor of Engineering
+in
+Information Science and Engineering
+
+Submitted by
+Project Associates
+USN: XXXXXXX
+USN: XXXXXXX
+USN: XXXXXXX
+USN: XXXXXXX
+
+Under the Guidance of
+Guide Name
+Assistant Professor, Dept. of IS&E
+
+DEPARTMENT OF INFORMATION SCIENCE AND ENGINEERING
+Academic Year 2026–27
+
+CHAPTER 1
+INTRODUCTION
+DESCRIPTION
+AI-Powered Interview Evaluation & Resume Analysis System is an AI-driven recruitment intelligence platform designed to improve the efficiency, consistency, and fairness of candidate screening and interview assessment. The system processes candidate resumes and job descriptions to extract and organize relevant information such as skills, education, experience, projects, and role requirements into structured representations. It enables recruiters and academic evaluators to assess qualification alignment with specific roles, verify candidate identity before assessment, and evaluate interview performance using role-based MCQ, theory, and coding questions.
+The platform also supports structured scoring, recommendation generation, and downloadable evaluation reports, providing an integrated environment for managing resume analysis, identity verification, interview evaluation, and hiring decision support within a single workflow.
+MOTIVATION
+The motivation for developing this system arises from the need for a more transparent, reliable, and scalable approach to modern recruitment processes. Recruiters and evaluators require better support in interpreting resume content, relating candidate qualifications to job requirements, confirming candidate identity before online assessments, and evaluating technical responses in a consistent manner. Manual screening remains time-consuming and often inconsistent across reviewers, while many digital hiring workflows lack integrated identity verification and structured interview scoring.
+These challenges highlight the need for a unified system that supports informed hiring decisions while maintaining fairness, authenticity, and credibility of candidate evaluation information.
+SCOPE OF THE PROJECT
+The scope of the project covers an integrated set of recruitment-support functions. The implemented system includes resume intelligence and candidate information extraction, job description and requirement matching, and identity verification using ID-card upload and live selfie comparison. It also provides role-based interview generation covering MCQ, theory, and coding assessments, automated evaluation of candidate responses, and overall score computation with hiring recommendations.
+The project further covers recruiter and candidate dashboards, candidate ranking, report listing and filtering, and downloadable PDF evaluation reports. Together, these functional areas define the scope of the implemented AI-Powered Interview Evaluation & Resume Analysis System.
+
+CHAPTER 2
+LITERATURE SURVEY
+REVIEW OF EXISTING RESEARCH
+Research in automated recruitment and career-support systems spans document analysis, natural language processing, semantic matching, identity assurance, interview assessment, and generative language models. The following subsections review established approaches in these areas and identify challenges relevant to resume analysis and interview evaluation.
+Document Parsing and Resume Information Extraction
+Early document-processing approaches commonly relied on rule-based methods, text segmentation, and structural heuristics to extract information from unstructured documents. Such approaches can become difficult to generalize when document structure varies significantly across layouts. Research in document analysis has therefore considered spatial information and page structure as important sources of information in addition to extracted text.
+After document text has been extracted, NLP techniques can be used to identify meaningful entities and sections. Research in information extraction has investigated approaches for recognizing entities such as employment history, education, skills, and other candidate attributes from resume text. Sequence-labelling and neural language-model approaches have contributed to moving resume analysis beyond simple keyword extraction toward contextual identification of candidate information.
+Document zoning is also important because the same term may have different significance depending on its location and surrounding context. Separating sections such as experience, education, skills, and projects can therefore provide a more structured basis for subsequent analysis and job matching.
+Semantic Skill Matching and Job Compatibility Assessment
+Research on person-job matching has progressed from lexical comparison toward approaches that consider semantic relationships between candidate information and job requirements. Sentence embedding methods, for example, introduced representations that can be compared using cosine similarity and demonstrated their usefulness for semantic similarity and transfer-learning tasks. Such approaches provide a basis for identifying related expressions even when candidate and job-description terminology is not identical.
+Standardized occupational and skill taxonomies also provide structured representations of the relationship between occupations and competencies. Resources such as O*NET and ESCO illustrate the importance of standardized occupational terminology when analysing relationships between skills and employment requirements. In practical recruitment systems, hybrid approaches that combine keyword coverage, skill overlap, and weighted scoring remain widely used for interpretable candidate ranking.
+Identity Verification in Online Hiring Systems
+Online and remote assessment platforms introduce additional risks related to impersonation and unverified participation. Research and industry practice in secure candidate onboarding have therefore emphasized authentication, document validation, and biometric or image-based identity checks before assessment begins. Identity verification reduces fraud risk and improves trust in digital hiring workflows, particularly when interviews or tests are conducted remotely.
+Lightweight systems may compare facial regions extracted from submitted identity documents with live selfie images using image-similarity heuristics. While such approaches are not equivalent to commercial biometric face-recognition services, they provide a practical academic demonstration of identity assurance within controlled evaluation environments.
+AI-Assisted Interview Evaluation and Scoring
+Recent work on AI-based interview scoring systems has examined automated evaluation of technical interviews using question-based analysis, role-specific question banks, and weighted scoring models. Role-based assessment and structured scoring improve consistency compared with purely subjective human judgment, while still allowing recruiter review of final recommendations.
+Advances in large language models have expanded the use of generative AI for answer evaluation, summarization, and feedback generation. However, research has also identified factuality and hallucination as important challenges. For academic and production-ready recruitment systems, deterministic rule-based evaluation for MCQ and coding tasks, combined with optional LLM enrichment, provides a balanced approach that preserves interpretability and reproducibility.
+EXISTING SYSTEM
+The existing recruitment ecosystem comprises Applicant Tracking Systems (ATS), online job portals, resume-processing platforms, interview platforms, and reporting tools. These systems support different stages of the recruitment process and are generally provided as separate services rather than as a unified candidate-evaluation workflow.
+Existing Recruitment and ATS Workflow
+In a conventional recruitment workflow, candidates submit resumes through an employer’s ATS or an online recruitment platform. The submitted documents are processed to extract information such as personal details, educational qualifications, employment history, and skills. The extracted information may subsequently be compared with job requirements to support candidate screening, organization, and ranking.
+ATS platforms are primarily designed to assist organizations in managing large volumes of applications and maintaining structured candidate information. Depending on the platform, automated screening may involve keyword-based matching, structured candidate profiles, or other forms of relevance assessment.
+Existing Interview and Evaluation Tools
+Existing interview platforms provide services such as scheduled video interviews, question banks, candidate recording, and recruiter scoring forms. Some platforms support coding assessments or aptitude tests as separate modules. Evaluation quality often depends heavily on human judgment, and scoring practices may vary across interviewers.
+In many workflows, identity checks are weak, missing, or handled through separate authentication systems that are not tightly linked to the interview session itself. As a result, remote assessments may remain vulnerable to impersonation or unverified participation.
+Limitations of the Existing System
+The existing recruitment and interview-support ecosystem presents several limitations. Resume processing may be affected by variations in document structure and formatting, while automated matching may not always provide sufficient transparency regarding the relationship between candidate qualifications and job requirements. Interview evaluation may remain inconsistent across reviewers, and identity verification is frequently absent from the assessment workflow.
+Furthermore, resume analysis, identity verification, interview generation, answer evaluation, and report generation are commonly handled through separate services. This separation can result in a fragmented recruitment workflow and increased manual effort for recruiters. These limitations demonstrate the need for approaches that provide more integrated and transparent support throughout the candidate evaluation process.
+PROBLEM STATEMENT
+Modern recruitment processes increasingly depend on automated systems for resume processing, candidate screening, and interview assessment. However, existing approaches present challenges in accurately interpreting candidate information, relating qualifications to job requirements, verifying candidate identity before online assessment, evaluating technical responses consistently, and generating structured hiring reports. The problem addressed by this project can be characterized by the following five areas:
+Resume Interpretation: Variations in document structure, formatting, and layout can affect the extraction and organization of information from resumes, potentially resulting in incomplete, misplaced, or incorrectly interpreted candidate data.
+Qualification and Job Matching: Differences in terminology between candidate resumes and job descriptions can make it difficult to establish accurate correspondence between existing qualifications and specified job requirements. Keyword-based matching alone may not adequately capture related or equivalent competencies.
+Identity Assurance in Online Assessment: Remote interviews and tests introduce the risk of fake or unverified participation when identity checks are weak or absent. Confirming that the person taking the assessment matches the submitted identity document remains an important concern.
+Consistency of Interview Evaluation: Manual interview scoring depends on individual judgment and may vary across interviewers. Structured evaluation of MCQ, theory, and coding responses is required to improve fairness and reproducibility.
+Fragmentation of Recruitment Support: Resume analysis, identity verification, interview generation, evaluation, and reporting are commonly handled through separate platforms. This separation can result in fragmented information and require recruiters to manage different stages of the evaluation process independently.
+PROPOSED SYSTEM
+The AI-Powered Interview Evaluation & Resume Analysis System is proposed as an integrated recruitment-intelligence platform designed to address the limitations identified in existing hiring workflows. The system combines resume analysis, job matching, identity verification, role-based interview assessment, automated scoring, and report generation within a unified platform.
+Core Capabilities
+Resume Intelligence: The system processes candidate resumes and organizes relevant information such as contact details, education, professional experience, projects, certifications, and technical skills into a structured candidate profile.
+Job Description Matching: The system analyses job descriptions and compares them with extracted resume content to compute a job-match score, identify overlapping skills, and highlight strengths and improvement areas.
+Identity Verification: Before interview assessment, candidates upload an identity document and capture a live selfie. The system compares facial regions using image-similarity heuristics and records verification status for subsequent access decisions.
+Role-Based Interview Generation: The system provides interview questions organized according to selected job roles, covering MCQ, theory, and coding sections drawn from a curated question bank.
+Automated Evaluation and Scoring: Candidate responses are evaluated using deterministic scoring for MCQ and coding tasks, keyword and overlap-based analysis for theory answers, and weighted aggregation into resume, interview, coding, and overall scores with hiring recommendations.
+Reporting and Dashboard Support: The platform stores evaluation records, presents ranking and dashboard statistics, and generates downloadable PDF reports for recruiter review.
+System Integration and Operational Flow
+The proposed system integrates these capabilities into a connected recruitment-support workflow. The process begins with secure login as a candidate or recruiter. Candidates complete identity verification and may upload a resume for analysis against a job description. Based on the selected role, the system generates interview questions spanning MCQ, theory, and coding sections.
+After the candidate submits answers, the evaluation module computes section-wise and overall scores, stores a candidate report, and returns structured feedback. Recruiters can review dashboard statistics, compare top candidates, inspect detailed reports, and download PDF summaries. This integrated flow connects resume analysis, identity assurance, interview assessment, and reporting within a common platform, reducing the need to manage these activities independently across multiple services.
+OBJECTIVES
+To develop a resume intelligence system for extracting and organizing relevant information from candidate resumes.
+To analyse job descriptions and assess candidate–job alignment through skill and requirement matching.
+To verify candidate identity using ID-card upload and live selfie comparison before interview assessment.
+To generate role-based interview questions covering MCQ, theory, and coding sections.
+To evaluate candidate responses using structured scoring methods and produce interpretable section-wise results.
+To compute overall candidate scores and recommendations by combining resume, interview, and coding performance.
+To provide recruiter and candidate dashboards for ranking, progress review, and evaluation insights.
+To generate downloadable evaluation reports that support fair and data-driven hiring decisions.
+
+CHAPTER 3
+SYSTEM REQUIREMENT AND SPECIFICATION
+FUNCTIONAL REQUIREMENTS
+The functional requirements specify the operations and capabilities that the system shall provide to support resume analysis, identity verification, interview assessment, and report generation.
+Authentication and Access Control
+FR-1.1 User Login: The system shall allow users to log in using valid credentials as a candidate or recruiter.
+FR-1.2 Role-Based Access: The system shall restrict protected pages and API operations according to the authenticated user role.
+FR-1.3 Session Token: The system shall issue a JWT authentication token upon successful login and require it for protected endpoints.
+FR-1.4 Current User Profile: The system shall allow an authenticated user to retrieve their profile information.
+Resume Intelligence
+FR-2.1 Resume Input: The system shall allow users to upload resume documents in supported formats, including PDF, DOCX, and TXT.
+FR-2.2 Resume Text Extraction: The system shall extract textual content from uploaded resume documents.
+FR-2.3 Candidate Information Extraction: The system shall extract and organize information such as name, contact details, education, experience, projects, certifications, and technical skills.
+FR-2.4 Resume Score Generation: The system shall compute a resume completeness and quality score based on extracted information.
+FR-2.5 Optional AI Enrichment: When configured, the system shall allow optional LLM-based enrichment of resume analysis results.
+Job Matching
+FR-3.1 Job Description Input: The system shall allow users to provide a job description for matching against a candidate resume.
+FR-3.2 Skill and Requirement Comparison: The system shall compare extracted candidate skills and resume content with job requirements.
+FR-3.3 Match Score Generation: The system shall calculate a job-match score and identify overlapping skills, strengths, and missing skills.
+Identity Verification
+FR-4.1 ID Document Upload: The system shall allow candidates to upload an identity document image.
+FR-4.2 Live Selfie Capture: The system shall allow candidates to capture a live selfie using the device camera.
+FR-4.3 Face Similarity Assessment: The system shall compare facial regions from the ID document and selfie and compute a similarity score.
+FR-4.4 Verification Status Persistence: The system shall store verification status, similarity score, and related metadata for the candidate.
+Interview Generation and Evaluation
+FR-5.1 Role Selection: The system shall provide a list of supported interview roles.
+FR-5.2 Question Generation: The system shall generate MCQ, theory, and coding questions based on the selected role and requested counts.
+FR-5.3 MCQ Evaluation: The system shall evaluate multiple-choice answers using exact option matching.
+FR-5.4 Theory Evaluation: The system shall evaluate descriptive answers using keyword presence and content-overlap analysis.
+FR-5.5 Coding Evaluation: The system shall execute submitted code against defined test cases and assign coding scores.
+FR-5.6 Full Interview Scoring: The system shall compute weighted interview and overall scores and generate a hiring recommendation.
+FR-5.7 Legacy Free-Text Evaluation: The system shall support recruiter-oriented free-text interview evaluation producing communication, technical, and confidence scores.
+Reporting and Dashboard
+FR-6.1 Report Persistence: The system shall store candidate evaluation reports including scores, recommendations, and feedback.
+FR-6.2 Report Listing: The system shall allow users to view and filter stored candidate reports.
+FR-6.3 Report Detail Retrieval: The system shall allow users to retrieve a specific candidate report by identifier.
+FR-6.4 PDF Export: The system shall allow download of evaluation reports in PDF format.
+FR-6.5 Dashboard Statistics: The system shall provide aggregate statistics such as total evaluations, average scores, recent activity, and top candidates.
+NON-FUNCTIONAL REQUIREMENTS
+The non-functional requirements specify the quality attributes and operational characteristics of the system. They define the expected standards for performance, reliability, usability, security, maintainability, scalability, compatibility, and consistency.
+Performance Requirements
+NFR-1.1: The system shall provide a visible processing status while executing operations that require additional processing time.
+NFR-1.2: The system shall complete supported user operations without blocking unrelated user-interface interactions.
+NFR-1.3: The system shall avoid unnecessary repeated processing when previously available data can be reused.
+Reliability and Fault Tolerance
+NFR-2.1: The system shall handle failures of optional dependent services, such as MongoDB or Ollama, without terminating the application unexpectedly.
+NFR-2.2: The system shall validate structured outputs before they are used by subsequent system components.
+NFR-2.3: The system shall display an appropriate error message when a requested operation cannot be completed successfully.
+NFR-2.4: The system shall prevent invalid or incomplete data from being accepted where required fields or valid formats are specified.
+Usability
+NFR-3.1: The system shall provide consistent navigation and interaction patterns across its major functional modules.
+NFR-3.2: The system shall present assessment results and recommendations using understandable labels, descriptions, and supporting information.
+NFR-3.3: The system shall provide clear status and feedback information for user-initiated operations.
+NFR-3.4: The system shall allow users to access major recruitment-support functions without requiring knowledge of the system’s internal implementation.
+Security and Privacy
+NFR-4.1: The system shall restrict access to protected candidate and evaluation information according to the implemented access-control mechanisms.
+NFR-4.2: The system shall keep database credentials, API keys, and other sensitive configuration values outside the application source code.
+NFR-4.3: The system shall validate uploaded files against supported file types before processing.
+NFR-4.4: The system shall validate user-provided input before processing or storing it.
+Maintainability and Testability
+NFR-5.1: The system shall maintain separation between major application components to support independent modification and maintenance.
+NFR-5.2: The system shall use defined data structures and validation rules consistently across relevant application components.
+NFR-5.3: Critical processing workflows shall be verifiable through manual, API, and end-to-end testing procedures.
+Scalability and Extensibility
+NFR-6.1: The system shall allow individual functional components to be modified or extended without requiring unnecessary changes to unrelated components.
+NFR-6.2: The system shall provide modular interfaces for optional AI provider integration.
+NFR-6.3: The question bank shall be extensible to support additional job roles and question sets.
+Compatibility
+NFR-7.1: The web application shall operate on supported modern web browsers.
+NFR-7.2: The system shall support the document formats specified for resume input and PDF report export.
+NFR-7.3: The user interface shall remain usable across supported desktop and laptop viewport sizes.
+Accuracy and Consistency
+NFR-8.1: The system shall produce consistent results for identical inputs when processed under the same configuration and deterministic processing conditions.
+NFR-8.2: The system shall maintain consistency between stored evaluation records and the corresponding information presented in generated reports.
+NFR-8.3: The system shall distinguish deterministic scoring outcomes from optional AI-enriched analysis where applicable.
+HARDWARE REQUIREMENTS
+The hardware requirements for the system depend on whether the optional AI service layer uses local model inference through Ollama or operates in rule-based mode only. The following configuration is sufficient for development, testing, and demonstration of the implemented system.
+3.3 Hardware Requirements
+
+SOFTWARE REQUIREMENTS
+The software environment for the system consists of the runtimes, frameworks, libraries, database software, optional AI service interfaces, development tools, and testing tools used by the implemented system. The following requirements are based on the software dependencies and configuration identified in the project repository.
+3.4 Software Requirements
+
+
+CHAPTER 4
+SYSTEM DESIGN
+SYSTEM ARCHITECTURE
+The system follows a modular layered architecture consisting of the user interface, backend API, core processing modules, and data and service layers. The architecture separates user interaction from application processing, persistent data storage, optional AI services, and file storage. This structure enables the different functions of the system to operate as coordinated modules while maintaining separation between presentation, processing, and data management.
+System Architecture
+
+Figure 4.1 System Architecture Diagram
+The system follows a layered architecture consisting of the user interface, frontend, backend API, core processing modules, and data and optional service layers. The user interacts with the system through the web interface to log in, upload resumes, verify identity, take interviews, and access reports. The frontend, developed using React, sends user requests to the FastAPI backend.
+The FastAPI backend handles requests, validates input, and coordinates the different processing modules. The core processing layer performs authentication, resume parsing and analysis, job matching, identity verification, interview question generation, answer evaluation, scoring, and report generation.
+The processing modules interact with SQLite or MySQL through SQLAlchemy for storing and retrieving users, verification records, and candidate reports. Optional MongoDB support is used for GridFS file storage and candidate profile documents. The configured AI provider may use a rule-based engine by default or an optional local Ollama service for enrichment.
+After processing, the generated results, including resume scores, verification status, interview scores, recommendations, and reports, are returned through the backend to the frontend and presented to the user. Thus, the architecture connects the major components of the system into a single workflow for resume analysis, identity assurance, interview evaluation, and reporting.
+USE CASE DIAGRAM
+
+Figure 4.2 Use Case Diagram
+The candidate first logs into the system and accesses the candidate workspace. From the workspace, the user can verify identity, upload and analyze a resume, match the profile with a job description, take a role-based interview, and view personal reports. The recruiter logs in and can analyze resumes, evaluate candidates, view dashboards, inspect reports, download PDF summaries, and access administrative information.
+Identity verification provides assurance before interview assessment. Resume and job-description analysis provide information required for scoring and shortlisting. Interview generation and evaluation produce section-wise and overall scores that feed into report generation. Thus, the diagram represents both the main analytical flow and the independent support functions available to candidates and recruiters.
+SEQUENCE DIAGRAM
+
+Figure 4.3 Sequence Diagram
+The sequence begins when the User/Candidate logs in through the React frontend. The frontend sends credentials to the FastAPI backend, which authenticates the user and returns a JWT token. The candidate then uploads an ID document and selfie for verification. The backend validates the images, computes similarity, stores verification status, and returns the result to the frontend.
+For resume analysis, the frontend sends the uploaded resume and optional job description to the backend. The resume-processing module extracts and organizes relevant information, computes resume and job-match scores, and may consult the optional AI provider when enrichment is configured. Relevant information is stored in the relational database and optionally in MongoDB.
+For interview evaluation, the frontend requests role-based questions, collects MCQ, theory, and coding answers, and submits them for full evaluation. The backend scores each section, computes weighted overall results, stores a candidate report, and returns the structured outcome to the frontend for display and PDF download.
+ACTIVITY DIAGRAM
+The activity diagram represents the major activities and decision points involved in using the system. It shows how the user accesses the system, provides the required input, performs resume or interview-related analysis, and selects the appropriate recruitment-support function. The diagram also represents validation and alternative paths so that users can perform different functions according to their requirements.
+
+Figure 4.4 Activity Diagram
+The activity begins when the user logs into the system and is routed according to role. A candidate may complete identity verification; if verification fails, the system records a rejected status and requests correction before continuing the intended assessment path. The user may upload and analyze a resume or provide a job description for matching.
+After verification and optional resume analysis, the candidate can start an interview by selecting a role and answering MCQ, theory, and coding questions. The system evaluates responses, generates scores and recommendations, and stores a report. Recruiters can view dashboards, inspect reports, and download PDF outputs. After completing the selected activity, the user views the resulting information or generated document and the activity reaches its completion state.
+DATA FLOW DIAGRAM (DFD)
+
+Figure 4.5 Data Flow Diagram
+The data flow diagram illustrates how information moves through the system. External entities include the Candidate and the Recruiter. Candidate credentials, resume files, ID and selfie images, job descriptions, and interview answers flow from the user interface into backend processing functions such as authentication, resume analysis, identity verification, interview evaluation, and report generation.
+Intermediate data stores include the relational database for users, verifications, and candidate reports, optional MongoDB collections and GridFS for documents and profiles, and the local uploads directory for persisted files. Processed outputs such as verification status, resume scores, interview scores, recommendations, dashboard statistics, and PDF reports flow back to the respective users. This captures the logical movement of data independent of physical UI layout.
+
+CHAPTER 5
+MODULES
+IMPLEMENTATION
+The AI-Powered Interview Evaluation & Resume Analysis System is implemented using a set of functional modules, each responsible for a specific area of authentication, resume analysis, identity verification, interview assessment, or reporting. The modules interact with common backend, database, and optional AI service components to provide an integrated recruitment-support platform.
+
+Figure 5.1 System Modules
+Authentication and User Access Module
+Purpose: Manages user login, JWT authentication, and role-based access for candidates and recruiters.
+Main Responsibilities: Handles credentials, password verification, token issuance, and protected-route authorization.
+Input: User credentials and role information.
+Output: Authentication status, JWT token, and authorized user profile.
+Module Interaction: Provides authenticated user context required by other modules.
+Resume Analysis Module
+Purpose: Processes uploaded resumes and extracts relevant candidate information.
+Main Responsibilities: Processes PDF, DOCX, and TXT resumes; extracts education, experience, projects, certifications, and skills; and computes resume quality scores.
+Input: Resume document or resume text, with optional metadata.
+Output: Structured candidate profile, extracted skills, and resume score.
+Module Interaction: Provides candidate information to job matching, interview setup, and reporting modules.
+Job Matching Module
+Purpose: Compares candidate resume content with job requirements.
+Main Responsibilities: Identifies overlapping skills, computes job-match scores, and highlights strengths and missing skills.
+Input: Candidate resume information and job description text.
+Output: Job-match score and alignment feedback.
+Module Interaction: Uses information from the Resume Analysis Module and supports recruiter shortlisting.
+Identity Verification Module
+Purpose: Confirms candidate identity before interview assessment.
+Main Responsibilities: Accepts ID-card upload and live selfie capture, compares facial regions using image-similarity heuristics, and stores verification status.
+Input: ID document image and live selfie image.
+Output: Verification status, similarity score, and rejection reason where applicable.
+Module Interaction: Provides identity assurance for the interview workflow and persists verification records.
+Interview Generation Module
+Purpose: Provides structured role-based interview content.
+Main Responsibilities: Retrieves MCQ, theory, and coding questions from the role question bank according to selected role and requested counts.
+Input: Selected role and question-count preferences.
+Output: Interview question sets for MCQ, theory, and coding sections.
+Module Interaction: Supplies questions to the Evaluation Module and interview user interface.
+Evaluation Module
+Purpose: Evaluates candidate responses and computes scores.
+Main Responsibilities: Scores MCQ answers by exact match, theory answers by keyword and overlap analysis, coding answers by test-case execution, and aggregates weighted overall scores and recommendations. Also supports legacy free-text evaluation for communication, technical, and confidence scoring.
+Input: Candidate answers, resume score context, and selected role.
+Output: Section-wise scores, overall score, recommendation, and feedback.
+Module Interaction: Uses question-bank data and optional AI enrichment; provides results to reporting.
+Report Generation Module
+Purpose: Creates and manages structured evaluation reports.
+Main Responsibilities: Persists candidate reports, exposes listing and detail APIs, and generates downloadable PDF summaries.
+Input: Evaluation results, candidate metadata, and feedback content.
+Output: Stored reports and PDF documents.
+Module Interaction: Integrates outputs from resume analysis and interview evaluation.
+Dashboard and Admin Module
+Purpose: Provides overview and administrative visibility for recruiters.
+Main Responsibilities: Displays evaluation counts, average scores, recent activity, top candidates, available roles, and system status information.
+Input: Stored evaluation records and system configuration metadata.
+Output: Dashboard statistics and administrative summary views.
+Module Interaction: Consumes reports and role metadata to support decision-making.
+PSEUDOCODE
+The following pseudocode specifications represent the core computational and analytical workflows implemented in the system. Each algorithm delineates the structured sequence of inputs, processing steps, decision branches, and outputs that govern authentication, resume intelligence, identity verification, interview evaluation, and report generation.
+User Authentication
+FUNCTION AuthenticateUser(email, password)
+INPUT: email, password
+ 
+IF email IS EMPTY OR password IS EMPTY THEN
+    RETURN Error("Credentials cannot be empty")
+END IF
+ 
+user = FETCH User FROM DATABASE WHERE user.email = email
+IF user DOES NOT EXIST THEN
+    RETURN Error("Invalid username or password")
+END IF
+ 
+IF NOT VerifyPasswordHash(password, user.hashed_password) THEN
+    RETURN Error("Invalid username or password")
+END IF
+ 
+token = CreateJWT(user.id, user.role)
+OUTPUT: token, userProfile
+END FUNCTION
+Resume Ingestion and Analysis
+FUNCTION ProcessResume(resumeFile, jobDescription)
+INPUT: resumeFile, jobDescription
+ 
+IF NOT (resumeFile.format IN ["PDF", "DOCX", "TXT"]) THEN
+    RETURN Error("Unsupported document format")
+END IF
+ 
+rawText = ExtractText(resumeFile)
+candidateProfile = InitializeCandidateProfile()
+candidateProfile.contactInfo = ExtractContactDetails(rawText)
+candidateProfile.education = ExtractSection(rawText, "education")
+candidateProfile.experience = ExtractSection(rawText, "experience")
+candidateProfile.projects = ExtractSection(rawText, "projects")
+candidateProfile.skills = ExtractSkillsByKeywordScan(rawText)
+ 
+resumeScore = ComputeCompletenessScore(candidateProfile)
+matchResult = MatchAgainstJob(candidateProfile, jobDescription)
+ 
+IF AI_PROVIDER EQUALS "ollama" AND OllamaAvailable() THEN
+    enrichment = LLMAnalyzeResume(rawText, jobDescription)
+    candidateProfile = MergeEnrichment(candidateProfile, enrichment)
+END IF
+ 
+OUTPUT: candidateProfile, resumeScore, matchResult
+END FUNCTION
+Identity Verification
+FUNCTION VerifyIdentity(idCardImage, selfieImage)
+INPUT: idCardImage, selfieImage
+ 
+IF idCardImage IS NULL OR selfieImage IS NULL THEN
+    RETURN Error("Both ID card and selfie are required")
+END IF
+ 
+idFace = ExtractFacialRegion(idCardImage)
+selfieFace = ExtractFacialRegion(selfieImage)
+similarity = ComputeImageSimilarity(idFace, selfieFace)
+livenessOk = CheckBasicLivenessHeuristics(selfieImage)
+ 
+IF similarity >= 0.62 AND livenessOk THEN
+    status = "verified"
+ELSE
+    status = "rejected"
+END IF
+ 
+STORE VerificationRecord(userId, status, similarity)
+OUTPUT: status, similarity
+END FUNCTION
+Role-Based Question Generation
+FUNCTION GenerateQuestions(role, mcqCount, theoryCount, codingCount)
+INPUT: role, mcqCount, theoryCount, codingCount
+ 
+bank = GetQuestionsForRole(role)
+IF bank IS NULL THEN
+    RETURN Error("Unsupported role")
+END IF
+ 
+mcqSet = SelectQuestions(bank.mcq, mcqCount)
+theorySet = SelectQuestions(bank.theory, theoryCount)
+codingSet = SelectQuestions(bank.coding, codingCount)
+ 
+OUTPUT: mcqSet, theorySet, codingSet
+END FUNCTION
+Full Interview Evaluation and Scoring
+FUNCTION EvaluateFullInterview(resumeScore, mcqAnswers, theoryAnswers, codingAnswers)
+INPUT: resumeScore, mcqAnswers, theoryAnswers, codingAnswers
+ 
+mcqScore = EvaluateMCQ(mcqAnswers)            // exact option match
+theoryScore = EvaluateTheory(theoryAnswers)  // keywords + overlap
+codingScore = EvaluateCoding(codingAnswers)  // execute test cases
+ 
+interviewScore = (0.40 * mcqScore) + (0.60 * theoryScore)
+overallScore = (0.25 * resumeScore) + (0.45 * interviewScore) + (0.30 * codingScore)
+ 
+IF overallScore >= 80 THEN
+    recommendation = "Highly Recommended"
+ELSE IF overallScore >= 65 THEN
+    recommendation = "Recommended"
+ELSE IF overallScore >= 50 THEN
+    recommendation = "Consider with Further Review"
+ELSE
+    recommendation = "Needs Improvement"
+END IF
+ 
+report = SaveCandidateReport(scores, recommendation, feedback)
+OUTPUT: interviewScore, codingScore, overallScore, recommendation, report
+END FUNCTION
+Report Generation
+FUNCTION GenerateReportPDF(reportId)
+INPUT: reportId
+ 
+report = FETCH CandidateReport WHERE id = reportId
+IF report DOES NOT EXIST THEN
+    RETURN Error("Report not found")
+END IF
+ 
+pdfDocument = RenderEvaluationPDF(report)
+OUTPUT: pdfDocument
+END FUNCTION
+
+CHAPTER 6
+OVERVIEW
+TESTING
+Testing and validation in the AI-Powered Interview Evaluation & Resume Analysis System are performed to verify the correctness and consistency of the implemented system. The testing process covers the major backend processing functions, resume processing, identity verification, interview generation and evaluation, database operations, report generation, and frontend validation.
+Backend functions are validated through API testing and manual verification of individual processing workflows. Document-processing tests verify resume extraction and organization across supported document formats. Identity-verification tests validate successful and failed matching scenarios. Interview and scoring tests validate question generation, answer evaluation, weighted scoring, and recommendation logic.
+Database-related functionality is tested using the configured SQLite or MySQL environment, while frontend validation includes browser-based workflow checks across candidate and recruiter roles. Integrated workflow testing is used to verify the interaction between multiple system components from login to report download.
+TEST CASES
+The following representative test cases were used to validate the major functional modules and supporting components of the system. The test cases include normal operations, invalid inputs, boundary conditions, and important edge cases.
+6.2 Test Cases
+
+
+CHAPTER 7
+RESULTS AND DISCUSSION
+SNAPSHOTS
+The project produced successful results in the implemented end-to-end flow. The resume upload feature extracted candidate details correctly and calculated resume and job-match scores. The identity verification module worked as expected for matching and mismatched image pairs. The interview module generated role-based questions and evaluated candidate responses using MCQ, theory, and coding sections.
+The dashboard provided a clear summary of total evaluations, average score, recent activity, and top candidates. Recruiters can compare candidate performance using generated reports and score cards. The overall system demonstrates that an integrated AI-assisted platform can make the recruitment process faster, more structured, and more consistent.
+1. Home page showing candidate and recruiter entry
+
+Figure 7.1 Home page showing candidate and recruiter entry
+2. Candidate login page
+
+Figure 7.2 Candidate login page
+3. Identity verification page with ID upload and selfie capture
+
+Figure 7.3 Identity verification page with ID upload and selfie capture
+4. Resume analysis page with extracted skills and scores
+
+Figure 7.4 Resume analysis page with extracted skills and scores
+5. Interview page with MCQ, theory, and coding sections
+
+Figure 7.5 Interview page with MCQ, theory, and coding sections
+6. Recruiter dashboard with evaluation summary
+
+Figure 7.6 Recruiter dashboard with evaluation summary
+7. Reports page showing scores and recommendations
+
+Figure 7.7 Reports page showing scores and recommendations
+ADVANTAGES AND DISADVANTAGES
+The implemented platform provides an integrated approach to resume analysis, identity verification, interview evaluation, scoring, and report generation. The system offers several practical advantages while also having limitations related to document formats, identity-matching depth, answer-evaluation sophistication, and deployment infrastructure.
+Advantages
+Integrated Recruitment Support: Combines resume analysis, job matching, identity verification, role-based interview assessment, scoring, and reporting within a single platform.
+Structured Resume Intelligence: Extracts education, experience, projects, certifications, and skills into organized candidate information for further assessment.
+Interpretable Job Matching: Provides match scores and skill-overlap feedback to help recruiters understand candidate–job alignment.
+Identity Assurance before Assessment: Reduces fake participation risk by comparing ID-card and live selfie images before interview workflows.
+Role-Based Interview Coverage: Supports MCQ, theory, and coding assessment across multiple engineering roles.
+Weighted and Transparent Scoring: Combines resume, interview, and coding performance into overall scores and clear recommendation bands.
+Recruiter Decision Support: Provides dashboards, rankings, reusable reports, and PDF export for faster comparison of candidates.
+Disadvantages
+Document Format Limitations: Resume analysis depends on the structure and quality of the input document. Poorly formatted or image-only resumes may yield incomplete extraction.
+Lightweight Identity Matching: The current face-comparison approach is a practical similarity heuristic and is not equivalent to commercial biometric face-recognition systems.
+Theory Evaluation Depth: Keyword and overlap-based theory scoring may not fully capture nuanced or partially correct explanations without optional LLM enrichment.
+Controlled Coding Execution: Coding evaluation executes submitted solutions in a controlled academic environment and is not a fully isolated production sandbox.
+Optional AI Dependence: Advanced enrichment depends on local Ollama availability and computational resources when AI provider mode is enabled.
+Limited Role Coverage: The depth of interview content depends on the currently supported question bank and may require extension for specialized domains.
+CONCLUSION
+The contemporary recruitment process presents several challenges for organizations and evaluators, including difficulties in resume interpretation, matching candidate qualifications with job requirements, verifying identity for online assessments, evaluating technical responses consistently, and preparing structured hiring reports. To address these challenges, this project developed an AI-Powered Interview Evaluation & Resume Analysis System that combines resume analysis, job matching, identity verification, role-based interview assessment, automated scoring, and report generation within a unified platform.
+The system analyzes candidate resumes and job requirements to provide structured information about skills, education, experience, and compatibility. It verifies candidate identity using ID upload and live selfie comparison, generates role-based interview questions, evaluates MCQ, theory, and coding responses, and produces overall recommendations for recruiter review. These capabilities are complemented by dashboards, ranking views, and downloadable PDF reports.
+The implemented system was validated through representative functional and workflow testing covering authentication, resume processing, identity verification, interview evaluation, reporting, and dashboard behavior. The system also has practical limitations related to document formats, identity-matching sophistication, theory-evaluation depth, and optional local AI resource requirements.
+Overall, the project demonstrates an integrated approach to supporting recruiters and evaluators throughout the candidate assessment process. By combining structured resume intelligence, identity assurance, role-based interview evaluation, and reporting, the system provides a practical platform for faster, fairer, and more consistent hiring decisions.
+FUTURE ENHANCEMENTS
+Add voice and video interview analysis for richer remote assessment.
+Improve theory and free-text scoring using advanced large language models with stronger factual grounding.
+Strengthen identity verification using advanced biometric or liveness-detection methods.
+Expand the question bank to additional domains and multilingual interfaces.
+Introduce recruiter notifications, cloud hosting, and stronger production sandboxing for coding evaluation.
+Support mobile-friendly deployment and broader analytics for long-term hiring insights.
+
+BIBLIOGRAPHY
+S. K. Kopparapu, “Automatic extraction of usable information from unstructured resumes to aid search”, IEEE International Conference on Progress in Informatics and Computing (PIC), 2010, PP 99-103.
+S. Sanyal, S. Hazra, S. Adhikary, and N. Ghosh, “Resume parser with natural language processing”, International Journal of Engineering Science and Computing, 2017, PP 5192-5195.
+Y. Xu, M. Li, L. Cui, S. Huang, F. Wei, and M. Zhou, “LayoutLM: Pre-training of text and layout for document image understanding”, Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, 2020, PP 1192-1200.
+S. Maheshwary and H. Misra, “Matching resumes to jobs via deep Siamese network”, Companion Proceedings of the The Web Conference 2018, 2018.
+C. Qin, H. Zhu, T. Xu, C. Zhu, L. Jiang, E. Chen, and H. Xiong, “Enhancing person-job fit for talent recruitment: An ability-aware neural network approach”, Proceedings of the 41st International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR), 2018, PP 25-34.
+N. Reimers and I. Gurevych, “Sentence-BERT: Sentence embeddings using Siamese BERT-networks”, Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), 2019, PP 3982-3992.
+European Commission, “European Skills, Competences, Qualifications and Occupations (ESCO) Portal”, https://ec.europa.eu/esco/portal/home.
+U.S. Department of Labor, “The Occupational Information Network (O*NET) Resource Center”, https://www.onetcenter.org/.
+Z. Ji, N. Lee, R. Frieske, T. Yu, D. Su, Y. Xu, E. Ishii, Y. J. Bang, A. Madotto, and P. Fung, “Survey of hallucination in natural language generation”, ACM Computing Surveys, Vol. 55, No. 12, 2023, PP 1-38.
+P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, and N. Goyal, “Retrieval-augmented generation for knowledge-intensive NLP tasks”, Advances in Neural Information Processing Systems (NeurIPS), 2020, PP 9459-9474.
+S. Ramírez, “FastAPI Documentation”, https://fastapi.tiangolo.com/.
+Meta Platforms Inc., “React Documentation”, https://react.dev/.
+MongoDB Inc., “Motor: Asynchronous Python Driver for MongoDB Documentation”, https://www.mongodb.com/docs/drivers/motor/.
+Ollama, “Ollama Documentation”, https://ollama.com/.
+APPENDIX
+Appendix materials may include additional screenshots, API endpoint listings, sample resume inputs, sample evaluation reports, question-bank excerpts, and deployment notes for the frontend and backend services.
+Primary implementation locations:
+Frontend: /frontend (React application)
+Backend: /backend/main.py and /backend/app/*
+Uploads: /uploads
+Reports and diagrams: /reports

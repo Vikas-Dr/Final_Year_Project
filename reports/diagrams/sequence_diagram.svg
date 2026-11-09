@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
+  <rect width="1400" height="700" fill="#f8fafc"/>
+  <text x="700" y="50" text-anchor="middle" font-size="32" font-family="Arial" font-weight="700" fill="#0f172a">Sequence Diagram</text>
+  <line x1="170" y1="120" x2="170" y2="620" stroke="#64748b" stroke-width="2"/>
+  <line x1="520" y1="120" x2="520" y2="620" stroke="#64748b" stroke-width="2"/>
+  <line x1="870" y1="120" x2="870" y2="620" stroke="#64748b" stroke-width="2"/>
+  <line x1="1170" y1="120" x2="1170" y2="620" stroke="#64748b" stroke-width="2"/>
+  <text x="170" y="95" text-anchor="middle" font-size="22" font-family="Arial" font-weight="600" fill="#0f172a">Candidate</text>
+  <text x="520" y="95" text-anchor="middle" font-size="22" font-family="Arial" font-weight="600" fill="#0f172a">Frontend</text>
+  <text x="870" y="95" text-anchor="middle" font-size="22" font-family="Arial" font-weight="600" fill="#0f172a">Backend</text>
+  <text x="1170" y="95" text-anchor="middle" font-size="22" font-family="Arial" font-weight="600" fill="#0f172a">Database</text>
+  <path d="M170 170 L520 170" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 250 L870 250" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M870 340 L1170 340" stroke="#d97706" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1170 430 L870 430" stroke="#7c3aed" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M870 520 L520 520" stroke="#db2777" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 580 L170 580" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="345" y="155" font-size="18" font-family="Arial" fill="#0f172a">Upload resume / ID</text>
+  <text x="695" y="235" font-size="18" font-family="Arial" fill="#0f172a">Send request</text>
+  <text x="1020" y="325" font-size="18" font-family="Arial" fill="#0f172a">Store and process</text>
+  <text x="1030" y="415" font-size="18" font-family="Arial" fill="#0f172a">Return result</text>
+  <text x="695" y="505" font-size="18" font-family="Arial" fill="#0f172a">Show score + report</text>
+  <text x="345" y="565" font-size="18" font-family="Arial" fill="#0f172a">View final output</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+  </defs>
+</svg>

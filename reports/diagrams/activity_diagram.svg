@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#f8fafc"/>
+  <text x="600" y="50" text-anchor="middle" font-size="30" font-family="Arial" font-weight="700" fill="#0f172a">Activity Diagram</text>
+  <rect x="520" y="90" width="160" height="60" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="600" y="128" text-anchor="middle" font-size="20" font-family="Arial" font-weight="600" fill="#0f172a">Start</text>
+  <line x1="600" y1="150" x2="600" y2="190" stroke="#475569" stroke-width="3"/>
+  <rect x="470" y="190" width="260" height="80" rx="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="600" y="215" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">Login / Select role</text>
+  <text x="600" y="242" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">Candidate or Recruiter</text>
+  <line x1="600" y1="270" x2="600" y2="330" stroke="#475569" stroke-width="3"/>
+  <polygon points="600,330 580,300 620,300" fill="#2563eb"/>
+  <rect x="470" y="330" width="260" height="80" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="600" y="365" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">Upload Resume</text>
+  <text x="600" y="390" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">extract text & skills</text>
+  <line x1="600" y1="410" x2="600" y2="470" stroke="#475569" stroke-width="3"/>
+  <rect x="470" y="470" width="260" height="80" rx="20" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="600" y="505" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">Verify Identity</text>
+  <text x="600" y="532" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">ID + selfie match</text>
+  <line x1="600" y1="550" x2="600" y2="610" stroke="#475569" stroke-width="3"/>
+  <polygon points="600,610 580,580 620,580" fill="#2563eb"/>
+  <rect x="470" y="610" width="260" height="80" rx="20" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+  <text x="600" y="645" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">Interview</text>
+  <text x="600" y="672" text-anchor="middle" font-size="18" font-family="Arial" fill="#0f172a">MCQ + Theory + Coding</text>
+  <line x1="600" y1="690" x2="600" y2="750" stroke="#475569" stroke-width="3"/>
+  <rect x="480" y="750" width="240" height="70" rx="20" fill="#e9d5ff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="600" y="790" text-anchor="middle" font-size="22" font-family="Arial" font-weight="600" fill="#0f172a">Generate Report</text>
+  <line x1="600" y1="820" x2="600" y2="860" stroke="#475569" stroke-width="3"/>
+  <rect x="520" y="860" width="160" height="60" rx="20" fill="#bbf7d0" stroke="#16a34a" stroke-width="3"/>
+  <text x="600" y="898" text-anchor="middle" font-size="20" font-family="Arial" font-weight="600" fill="#0f172a">End</text>
+</svg>

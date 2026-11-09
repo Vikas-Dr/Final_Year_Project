@@ -1,0 +1,350 @@
+AI-Powered Interview Evaluation & Resume Analysis System
+PPT Content from Page 2 to Page 24
+
+--------------------------------------------------
+Page 2: Project Overview
+
+The AI-Powered Interview Evaluation & Resume Analysis System is a smart recruiting platform designed to help recruiters and evaluators review candidates more efficiently. The project reduces manual work by automatically analyzing resumes, checking candidate identity, and evaluating interview performance.
+
+The system works in three major steps:
+- Resume analysis and candidate scoring
+- Identity verification through ID upload and face matching
+- Interview evaluation with reports and ranking
+
+This project is useful for HR teams, companies, and universities where large numbers of applicants need quick and fair evaluation.
+
+Image: Insert project dashboard screenshot or system overview image here.
+
+--------------------------------------------------
+Page 3: Problem Statement
+
+Traditional hiring methods are slow and often unfair. Recruiters spend too much time reading resumes and comparing them with job requirements. In many cases, they must also check whether the candidate is real and not using fake identity details.
+
+These problems create delays, poor decisions, and a higher chance of human error. Many companies still do manual work that can be replaced by automation.
+
+The project solves this by using AI to automate resume analysis, identity verification, interview evaluation, and final reporting.
+
+--------------------------------------------------
+Page 4: Objectives of the Project
+
+The main objective of this project is to make recruitment faster, smarter, and more reliable.
+
+The project aims to:
+- Analyze resumes automatically and extract important information
+- Match candidate skills with the job description
+- Verify the candidate using ID document and face matching
+- Generate interview questions based on the job role
+- Evaluate candidate performance and create reports
+- Reduce manual effort and improve decision-making
+
+This system supports both recruiters and academic evaluators who need a structured and fair evaluation process.
+
+--------------------------------------------------
+Page 5: Scope of the Project
+
+The scope of this project includes all important parts of the hiring process.
+
+The system covers:
+- Resume upload and parsing
+- Candidate profile extraction
+- Job description comparison
+- Identity verification using ID card and face capture
+- Interview sessions with multiple question types
+- Performance scoring and final report creation
+
+The project is designed to support multiple job roles and can be extended to bigger recruitment systems in the future.
+
+--------------------------------------------------
+Page 6: Existing System vs Proposed System
+
+Existing System:
+- Recruiters review resumes manually
+- Candidate evaluation depends on human judgment
+- Identity checks are often weak or missing
+- Large applicant numbers slow down the process
+- Reports are created manually and can be inconsistent
+
+Proposed System:
+- Resume is uploaded, parsed, and analyzed automatically
+- Candidate skills are compared with the job requirement
+- ID upload and face matching verify identity before the interview
+- Interview questions are generated for the selected role
+- Final results are stored and shared through a dashboard
+
+The proposed system is more efficient, secure, and scalable than the traditional method.
+
+--------------------------------------------------
+Page 7: System Architecture
+
+The system is divided into different modules to make it easy to manage and expand.
+
+Frontend:
+- User interface for login, resume upload, interview, and reports
+
+Backend:
+- Handles API requests, logic, and database operations
+
+AI Module:
+- Extracts resume details, matches skills, evaluates answers, and calculates scores
+
+Database:
+- Stores user data, resumes, evaluation records, and reports
+
+Security Module:
+- Checks candidate identity before access to the assessment
+
+This structure helps the system work smoothly and supports future upgrades.
+
+Image: Insert system architecture diagram here.
+
+--------------------------------------------------
+Page 8: Module Description
+
+The project has several important modules:
+- User Authentication Module
+- Resume Analysis Module
+- Job Matching Module
+- Identity Verification Module
+- Interview Generation Module
+- Evaluation Module
+- Report Generation Module
+- Admin Dashboard Module
+
+Each module plays a role in the evaluation process. Together, they create a complete hiring support system.
+
+--------------------------------------------------
+Page 9: Resume Analysis Module
+
+The resume analysis module reads uploaded resume files and extracts the key information. It identifies details such as:
+- Candidate name
+- Education details
+- Work experience
+- Skills and certifications
+- Projects and achievements
+
+The system then compares this information with the job description to find the candidate's compatibility. This helps recruiters understand who is best suited for the job.
+
+Image: Insert sample resume parsing or extracted data screenshot here.
+
+--------------------------------------------------
+Page 10: Job Matching and Scoring
+
+After the resume is analyzed, the system calculates a job-match score. This score is based on how closely the candidate matches the required qualifications.
+
+The system checks:
+- Relevant skills
+- Education qualification
+- Work experience
+- Domain knowledge
+- Certification and project experience
+
+A higher score means a stronger match for the role. This helps recruiters shortlist candidates based on objective data.
+
+--------------------------------------------------
+Page 11: ID Card Upload and Face Verification
+
+One important feature of this project is identity verification. Before the candidate starts the test, they must upload an ID card and capture a live face image.
+
+The system compares the ID image and face image to check if they belong to the same person. If the images match, the candidate is allowed to continue. If they do not match, the system blocks access.
+
+This step reduces fake participation and improves trust in the interview process.
+
+Image: Insert ID upload and face verification UI screenshot here.
+
+--------------------------------------------------
+Page 12: Interview Workflow
+
+Once identity verification is completed, the candidate can start the interview. The system generates questions based on the selected job role.
+
+The interview may include:
+- Multiple-choice questions
+- Short descriptive answers
+- Technical problem-solving questions
+- Coding or practical tasks
+
+The platform records the candidate response and sends it to the evaluation module for analysis.
+
+Image: Insert interview page screenshot here.
+
+--------------------------------------------------
+Page 13: AI-Based Evaluation
+
+The evaluation module analyzes the candidate's performance using AI and rule-based logic. It checks different areas like technical knowledge, communication quality, confidence, and problem-solving ability.
+
+The system can evaluate:
+- Correctness of answers
+- Clarity of explanation
+- Relevance to the job role
+- Communication and confidence
+- Overall technical understanding
+
+This makes the assessment more structured and less dependent only on human opinion.
+
+--------------------------------------------------
+Page 14: Reporting and Dashboard
+
+After the interview, the system creates a final report for the recruiter. The report includes the candidate's score, skills, interview result, and overall recommendation.
+
+The dashboard shows:
+- Candidate list
+- Scores and ranks
+- Resume match result
+- Interview status
+- Downloadable reports
+
+This helps recruiters quickly identify the best candidates and make a final decision.
+
+Image: Insert dashboard/report page screenshot here.
+
+--------------------------------------------------
+Page 15: Database Design
+
+The database stores all information needed by the system. It includes tables for:
+- Users and roles
+- Candidate records
+- Resume uploads
+- Job descriptions
+- Interview questions
+- Evaluation results
+- Reports and scores
+
+This organized storage helps the system manage large data and support future expansion.
+
+Image: Insert ER diagram or database schema here.
+
+--------------------------------------------------
+Page 16: Functional Requirements
+
+The system must support the following basic functions:
+- User login and registration
+- Resume upload in PDF or DOCX format
+- Extraction of structured resume data
+- Job description matching
+- Candidate verification through ID and face match
+- Question generation for interviews
+- Scoring and evaluation of answers
+- Report generation and result display
+
+These features form the core of the final-year project.
+
+--------------------------------------------------
+Page 17: Non-Functional Requirements
+
+The system must also meet some quality requirements.
+
+These include:
+- Easy user interface
+- Fast response time
+- Secure data handling
+- Support for multiple users
+- Reliable file upload system
+- Good scalability for future updates
+
+Non-functional requirements help the project stay useful in real-world environments.
+
+--------------------------------------------------
+Page 18: Tools and Technologies
+
+The project uses several technologies for development.
+
+Frontend:
+- HTML, CSS, JavaScript
+- React.js
+- Tailwind CSS or Bootstrap
+
+Backend:
+- Python
+- FastAPI or Flask
+
+Database:
+- SQLite or MySQL
+- Optional MongoDB integration
+
+AI and NLP:
+- spaCy
+- NLTK
+- scikit-learn
+- Python-docx and PDF parsing tools
+
+--------------------------------------------------
+Page 19: Implementation Flow
+
+The implementation starts with user login and resume upload. The backend extracts the text and identifies key details. The system then compares the resume with the job role and generates a match score.
+
+After that, the candidate verifies identity using ID and face matching. If accepted, the system starts the interview. The answers are evaluated and final results are stored in the report system.
+
+This workflow makes the process automatic and easy to track.
+
+--------------------------------------------------
+Page 20: Testing and Validation
+
+Testing is important to make sure the system works correctly.
+
+The project should be tested for:
+- Correct resume parsing
+- Accurate skill extraction
+- Proper identity verification
+- Fair scoring logic
+- Interview question generation
+- Report generation quality
+
+Manual and functional tests help identify problems before deployment or demonstration.
+
+--------------------------------------------------
+Page 21: Results and Discussion
+
+The system provides clear and useful results. After the candidate completes the steps, the recruiter can see the full evaluation. The ranking helps improve candidate selection and reduces time spent on manual review.
+
+The system is practical and valuable because it combines AI, automation, and verification into one platform.
+
+The output is easy to understand and supports fast decision-making.
+
+Image: Insert result page, candidate score card, or ranking screenshot here.
+
+--------------------------------------------------
+Page 22: Advantages and Limitations
+
+Advantages:
+- Saves time for recruiters
+- Improves candidate screening consistency
+- Reduces fake interview attempts
+- Supports large-scale hiring decisions
+- Creates structured and downloadable reports
+
+Limitations:
+- AI evaluation may still need human review
+- Some resume formats may be hard to parse
+- Face verification depends on image quality
+- Model accuracy improves with more data and testing
+
+This helps present both the strengths and practical challenges of the project.
+
+--------------------------------------------------
+Page 23: Future Enhancements
+
+The project can be improved in many ways in the future.
+
+Possible enhancements include:
+- Real-time video interview analysis
+- Voice and emotion recognition
+- Advanced AI-powered score generation
+- Better multilingual support
+- Resume recommendation engine
+- Integration with hiring portals and HR systems
+
+These future upgrades will make the system smarter and more useful for real-world hiring.
+
+--------------------------------------------------
+Page 24: Conclusion
+
+The AI-Powered Interview Evaluation & Resume Analysis System is a strong final-year project with real-world value. It solves important challenges in the recruitment process by automating resume analysis, candidate verification, and interview evaluation.
+
+The project improves speed, fairness, and transparency in hiring. It reduces recruiter workload and helps companies make better decisions with less manual effort.
+
+The system is a practical solution for modern recruitment and evaluation systems.
+
+--------------------------------------------------
+Notes for images:
+- Add relevant screenshots of the live web app, resume upload page, dashboard, interview page, and face verification page.
+- Keep one image per slide where a visual is needed.
+- Use clear, high-quality images for better presentation.

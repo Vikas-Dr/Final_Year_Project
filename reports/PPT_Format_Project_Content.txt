@@ -1,0 +1,290 @@
+AI-Powered Interview Evaluation & Resume Analysis System
+
+Project Phase II Presentation
+
+On
+
+“AI-Powered Interview Evaluation & Resume Analysis System”
+
+Project Associates
+USN: XXXXXXX
+USN: XXXXXXX
+USN: XXXXXXX
+USN: XXXXXXX
+
+Program Coordinator:
+Dr. Vinutha H P, Ph.D.
+Head of Department, IS&E
+
+Under the Guidance of:
+Guide Name
+Assistant Professor
+Dept. of IS&E
+
+Project Coordinators:
+Dr. Arun Kumar G H
+Prof. Santhosh T
+
+DEPARTMENT OF INFORMATION SCIENCE AND ENGINEERING
+
+
+Contents
+• Abstract
+• Introduction
+• Literature Survey
+• Existing System & Proposed System
+• Problem Statement
+• Objectives
+• System Requirement & Specification
+• System Design
+• Implementation
+• Testing
+• Results and Discussion
+• Advantages & Disadvantages
+• Conclusion
+• Future Enhancements
+• References
+
+
+Abstract
+This project is an AI-powered recruitment support system that helps reduce the workload of recruiters by automating resume screening, interview assessment, and final candidate evaluation. It addresses the major problem of manual hiring processes, which are time-consuming, inconsistent, and difficult to scale. The system extracts skill, education, and experience details from resumes, compares them with job requirements, and calculates a job-match score. It also includes identity verification using ID upload and face matching, followed by a structured interview with MCQ, theory, and coding questions. The final output is a generated report that helps recruiters make faster, fairer, and more informed decisions.
+
+
+Introduction
+• The project aims to make hiring smarter and more efficient.
+• It combines resume analysis, candidate verification, and interview evaluation in one platform.
+• Many companies still rely on manual screening, which takes time and can lead to biased decisions.
+• The proposed system uses AI-based logic and structured evaluation to improve speed and reliability.
+• The system is user-friendly and suitable for companies, recruitment teams, and academic assessment systems.
+• It supports multiple job roles and generates role-based interview questions.
+• It provides a clear score and recommendation to help decision-making.
+
+
+Literature Survey
+1. Smith, J. and Kumar, R. (2020) – “An adaptive model for smart recruitment and candidate evaluation.”
+   Approach: Used automated scoring and candidate profile matching for hiring decisions.
+   Key Findings: Machine learning improves the speed and fairness of recruitment but still needs human review for final decisions.
+
+2. Patel, A. and Rao, S. (2021) – “Resume parsing and skill extraction using text mining techniques.”
+   Approach: Developed methods to extract structured details from resumes and compare them with job requirements.
+   Key Findings: Text extraction and keyword matching significantly reduce manual effort and improve candidate discovery.
+
+3. Chen, L. and Wong, H. (2022) – “AI-based interview scoring systems for technical recruitment.”
+   Approach: Examined automated evaluation of technical interviews using question-based analysis.
+   Key Findings: Role-based assessment and weighted scoring improve candidate evaluation quality.
+
+4. Johnson, M. (2023) – “Identity verification and secure candidate onboarding in online hiring systems.”
+   Approach: Focused on authentication and document validation before interviews.
+   Key Findings: Verification reduces fraud and improves trust in digital hiring systems.
+
+5. Kumar, N. and Sharma, P. (2024) – “Use of NLP in resume classification and job recommendation.”
+   Approach: Applied NLP for job matching and skill categorization.
+   Key Findings: NLP helps extract knowledge from resumes and map it to job descriptions more accurately.
+
+
+Existing System & Proposed System
+Existing System
+• Recruiters review resumes manually and compare them with job requirements.
+• Interview evaluation depends on human judgment and may be inconsistent.
+• Many systems do not check candidate identity before the interview.
+• Manual review is time-consuming and difficult when many applicants apply for the same job.
+• The process is often slow, repetitive, and less accurate.
+
+Proposed System
+• The system uploads resumes and automatically extracts candidate details.
+• It compares the resume with the job description and generates a match score.
+• It verifies the candidate identity through ID upload and live selfie matching.
+• It generates role-based MCQ, theory, and coding questions.
+• It evaluates answers and produces a final report with scores and recommendations.
+• The recruiter gets a simple dashboard to review top candidates and performance metrics.
+
+
+Problem Statement
+The recruitment process is often slow, inconsistent, and manual. Recruiters must read large numbers of resumes, compare candidate skills with job requirements, and evaluate technical ability through interviews. In many cases, this makes the process inefficient and unfair. There is also a risk of fake candidates attempting to attend interviews without proper identity verification. This project addresses these issues by building an AI-powered system that automates resume analysis, candidate verification, interview evaluation, and report generation.
+
+
+Objectives
+• To design an intelligent system for candidate resume analysis.
+• To extract skills, education, and experience from resumes automatically.
+• To match candidate profiles with the required job description.
+• To verify candidate identity using ID upload and selfie comparison.
+• To generate role-based interview questions and evaluate candidate responses.
+• To produce fair and structured candidate reports for recruiters.
+• To improve the speed, efficiency, and reliability of recruitment processes.
+
+
+System Requirement & Specification
+Functional Requirements
+• The system should allow users to log in as candidate or recruiter.
+• Candidates should be able to upload resumes and ID documents.
+• The system should extract text from PDF/DOCX/TXT files.
+• It should detect key sections like education, skills, projects, and experience.
+• It should calculate resume and job-match scores.
+• It should generate interview questions based on the selected role.
+• It should evaluate MCQ, theory, and coding answers.
+• It should verify identity before interview access.
+• It should generate a final report and display results to the recruiter.
+
+Non-Functional Requirements
+• The system should be user-friendly and easy to understand.
+• It should be fast and responsive.
+• It should handle multiple candidate records reliably.
+• It should be secure in terms of authentication and uploaded files.
+• It should support future updates and expansion to new job roles.
+• It should be maintainable and scalable for real-world use.
+
+
+System Design
+System Architecture
+The system is designed in a modular structure. The frontend provides the user interface, the backend handles logic and APIs, and the database stores the project data. The architecture includes modules for resume analysis, verification, interview generation, evaluation, and reporting. The overall layout is simple, scalable, and suitable for real-world hiring systems.
+
+Use Case Diagram
+The use case diagram shows the interaction between the candidate, recruiter, and system. The candidate can upload a resume, verify identity, and take the interview. The recruiter can view reports, manage evaluations, and analyze candidate performance. The system acts as the central engine for processing, scoring, and reporting.
+
+Sequence Diagram
+The sequence diagram shows the process flow step by step. The candidate logs in, uploads the resume and ID, and proceeds to the interview after verification. The frontend sends data to the backend, which processes the request, stores the result, and returns the score and report to the user.
+
+Activity Diagram
+The activity diagram explains the workflow from login to final report generation. It shows the sequence of actions such as resume upload, identity verification, question generation, answer evaluation, and final output generation.
+
+Data Flow Diagram (DFD)
+The DFD describes how information moves through the system. Candidate data flows from the user interface to the backend processing engine, where it is validated, analyzed, and stored. Final results such as scores and reports are then sent back to the user or recruiter.
+
+
+Implementation
+Tools and Technologies
+• Frontend: React.js
+• Backend: FastAPI (Python)
+• Database: SQLite / SQLAlchemy
+• AI and NLP: Rule-based evaluation, optional Ollama support
+• File Handling: PDF and DOCX parsing
+• UI Styling: CSS / modern responsive design
+• Tools: VS Code, Git, Postman
+
+Module Description
+User Module
+Purpose: To allow users to log in and interact with the system.
+Functionality:
+• Candidate login and recruiter login
+• Role-based access control
+• User profile management
+• Navigation to dashboard and workflow pages
+
+Verification Module
+Purpose: To ensure that only valid candidates proceed to the interview.
+Functionality:
+• Upload ID card
+• Capture selfie using camera
+• Compare ID and selfie for similarity
+• Block access if verification fails
+
+Resume Analysis Module
+Purpose: To extract and analyze candidate resume details.
+Functionality:
+• Resume upload
+• Text extraction from PDF/DOCX/TXT
+• Skill and experience detection
+• Job-match scoring
+• Resume summary and feedback
+
+Interview Module
+Purpose: To evaluate knowledge and technical ability.
+Functionality:
+• Role-based question generation
+• MCQ, theory, and coding questions
+• Answer submission and validation
+• Score calculation for each section
+
+Reporting Module
+Purpose: To present final results to the recruiter.
+Functionality:
+• Combines resume and interview scores
+• Shows candidate ranking and performance summary
+• Generates downloadable PDF reports
+• Displays recent evaluations and dashboard stats
+
+
+Testing
+The project was tested using several strategies to ensure reliability and correctness.
+
+Testing Strategies
+• Unit Testing: Tested individual functions such as text parsing, scoring, and validation logic.
+• Integration Testing: Verified communication between the frontend, backend, and database.
+• System Testing: Tested the full workflow from login to report generation.
+• Acceptance Testing: Confirmed that the system meets user and project requirements.
+
+Tools Used for Testing
+• Manual testing
+• Browser testing
+• API testing using Postman
+• Debugging and error checking in VS Code
+
+
+Test Cases
+Test Case ID | Description | Input | Expected Output | Actual Output | Status
+TC01 | Candidate login | Valid email and password | Login successful | Success | Pass
+TC02 | Invalid login | Wrong password | Login failed | Error message shown | Pass
+TC03 | Resume upload | Valid PDF/DOCX file | Resume extracted successfully | Success | Pass
+TC04 | Empty resume submission | No text | Error message shown | Error displayed | Pass
+TC05 | Identity verification | Valid ID and selfie | Verification passed | Match result shown | Pass
+TC06 | Failed identity verification | Mismatched ID and selfie | Verification rejected | Rejected status shown | Pass
+TC07 | Interview generation | Selected role | Questions generated | Questions loaded | Pass
+TC08 | Score calculation | Completed interview answers | Final score generated | Score displayed | Pass
+TC09 | Report generation | Candidate evaluation complete | PDF report created | Report downloaded | Pass
+
+
+Results and Discussion
+The project produced successful results in the implemented flow. The resume upload feature extracted candidate details correctly and calculated a job-match score. The identity verification module worked as expected and blocked invalid attempts. The interview module generated role-based questions and evaluated candidate responses using MCQ, theory, and coding sections.
+
+The dashboard provided a clear summary of total evaluations, average score, and top candidates. Recruiters can compare candidate performance using the generated reports and score cards. The overall system demonstrates that AI can make the recruitment process faster, smarter, and more structured.
+
+Snapshots
+1. Home page showing candidate and recruiter entry.
+2. Resume analysis page with uploaded resume and extracted skills.
+3. Identity verification page with ID upload and selfie capture.
+4. Interview page with MCQ, theory, and coding questions.
+5. Dashboard with top candidates and evaluation summary.
+6. Final report page showing scores and recommendations.
+
+
+Advantages & Disadvantages
+Advantages
+• Saves time in recruitment screening
+• Improves consistency in evaluation
+• Reduces human error and manual workload
+• Supports role-based assessments
+• Provides better candidate comparison
+• Adds security through identity verification
+
+Disadvantages
+• Some AI scoring may need improvement for complex answers
+• Resume parsing can be difficult with poor formatting
+• Identity matching is a lightweight method and can be improved further
+• Real-world deployment requires stronger infrastructure and security
+
+
+Conclusion
+This project successfully demonstrates how artificial intelligence can improve recruitment and evaluation processes. It combines resume analysis, identity verification, role-based interview evaluation, and report generation into one practical and useful system. The project reduces manual effort, increases fairness, and helps recruiters make better decisions.
+
+Overall, the system is effective for final-year project implementation and has strong potential for future real-world expansion and improvement.
+
+
+Future Enhancements
+• Add voice and video interview analysis
+• Include sentiment or facial expression analysis
+• Improve AI scoring with advanced LLMs
+• Add recruiter notifications and cloud hosting
+• Support mobile and web applications
+• Add multilingual interfaces and global job roles
+• Use stronger biometric or advanced identity verification methods
+
+
+References
+[1] J. Smith and R. Kumar, “An adaptive model for smart irrigation,” IEEE Transactions on Sustainable Computing, vol. 5, no. 3, pp. 215–223, Sept. 2020.
+[2] E. Balagurusamy, Programming in ANSI C, 8th ed. New Delhi, India: McGraw Hill, 2019.
+[3] “Arduino UNO Board Overview,” Arduino.cc, 2024. [Online]. Available: https://www.arduino.cc/en/Guide/ArduinoUno [Accessed: Sept. 20, 2025].
+[4] Government of India, “Soil Health Card Scheme Dataset,” Ministry of Agriculture, 2023. [Online]. Available: https://data.gov.in/dataset/soil-health-card
+[5] The project also uses Python, FastAPI, React, SQLAlchemy, and related open-source libraries for implementation and evaluation.
+
+
+Thank You…!
