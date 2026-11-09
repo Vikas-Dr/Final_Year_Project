@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Final_Year_Project/static/css/main.c63a07b3.css",
+    "main.js": "/Final_Year_Project/static/js/main.2bd34990.js",
+    "index.html": "/Final_Year_Project/index.html",
+    "main.c63a07b3.css.map": "/Final_Year_Project/static/css/main.c63a07b3.css.map",
+    "main.2bd34990.js.map": "/Final_Year_Project/static/js/main.2bd34990.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c63a07b3.css",
+    "static/js/main.2bd34990.js"
+  ]
+}
