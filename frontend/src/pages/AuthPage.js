@@ -43,7 +43,13 @@ export default function AuthPage() {
       login({ user: res.data.user, accessToken: res.data.access_token });
       navigate(selectedRole === "candidate" ? "/verification" : "/dashboard");
     } catch (err) {
-      setError(err.response?.data?.detail || "Login failed. Please check your credentials.");
+      if (err.response?.data?.detail) {
+        setError(err.response.data.detail);
+      } else if (!err.response) {
+        setError("Cannot connect to server. If the backend is waking up, please wait a few seconds and try again.");
+      } else {
+        setError("Login failed. Please check your credentials.");
+      }
     } finally {
       setLoading(false);
     }

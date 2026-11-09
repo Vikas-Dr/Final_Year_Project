@@ -19,6 +19,6 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ORIGINS
-        value: https://Vikas-Dr.github.io
+        value: https://vikas-dr.github.io,https://Vikas-Dr.github.io
       - key: PYTHON_VERSION
         value: "3.11.4"

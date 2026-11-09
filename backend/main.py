@@ -65,12 +65,14 @@ CORS_ORIGINS = [o.strip() for o in CORS_ORIGINS if o.strip()]
 CORS_ORIGINS += [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://vikas-dr.github.io",
     "https://Vikas-Dr.github.io",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
+    allow_origin_regex=r"https://.*\.github\.io",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
